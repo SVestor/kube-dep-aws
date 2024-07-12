@@ -31,7 +31,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: MONGODB_CONNECTION_URI
-              value: 'mongodb+srv://svestor:supersecretpass@cluster0.a9myspe.mongodb.net/users?retryWrites=true&w=majority&appName=Cluster0'
+              value: 'mongodb+srv://svestor:supersecretpass@cluster0.a9myspe.mongodb.net/tasks?retryWrites=true&w=majority&appName=Cluster0'
             - name: AUTH_API_ADDRESS
               value: 'auth-service.default:3000'
           resources:
