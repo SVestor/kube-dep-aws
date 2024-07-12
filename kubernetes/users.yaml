@@ -50,7 +50,7 @@ kind: Deployment
 metadata:
   name: users-deployment
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
       app: users

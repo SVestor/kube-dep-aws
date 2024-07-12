@@ -16,7 +16,7 @@ kind: Deployment
 metadata:
   name: tasks-deployment
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: tasks
@@ -27,11 +27,11 @@ spec:
     spec:
       containers:
         - name: tasks-api
-          image: svestor/kube-aws-tasks:latest
+          image: svestor/kube-aws-tasks
           imagePullPolicy: Always
           env:
             - name: MONGODB_CONNECTION_URI
-              value: 'mongodb+srv://svestor:supersecretpass@cluster0.a9myspe.mongodb.net/tasks?retryWrites=true&w=majority&appName=Cluster0'
+              value: 'mongodb+srv://svestor:supersecretpass@cluster0.a9myspe.mongodb.net/tasksdb?retryWrites=true&w=majority&appName=Cluster0'
             - name: AUTH_API_ADDRESS
               value: 'auth-service.default:3000'
           resources:

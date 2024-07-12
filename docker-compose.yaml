@@ -18,5 +18,5 @@ services:
     ports:
       - '3000:3000'
     environment:
-      MONGODB_CONNECTION_URI: 'mongodb+srv://svestor:supersecretpass@cluster0.a9myspe.mongodb.net/tasks?retryWrites=true&w=majority&appName=Cluster0'
+      MONGODB_CONNECTION_URI: 'mongodb+srv://svestor:supersecretpass@cluster0.a9myspe.mongodb.net/tasksdb?retryWrites=true&w=majority&appName=Cluster0'
       AUTH_API_ADDRESS: 'auth:3000'    
